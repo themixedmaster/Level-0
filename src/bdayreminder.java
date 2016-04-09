@@ -19,6 +19,12 @@ public class bdayreminder {
         String owensBirthday = "May 28th";
         
         String dylansBirthday = "December 7th";
+        
+        String grandpasBirthday = "November 28th";
+
+        String grandmasBirthday = "September 8th";
+        
+        String papasBirthday = "November 26th";
 
 
         // 2. Find out which birthday the user wants and and store their response in a variable
@@ -52,6 +58,18 @@ public class bdayreminder {
             // print myBirthday
         	else if( familymember.equals("Dylan")){
             	System.out.print("'s birthday is " + dylansBirthday + ".");	
+            	}
+        	else if( familymember.equals("Grandpa")){
+            	System.out.print("'s birthday is " + grandpasBirthday + ".");	
+            	}
+        	else if( familymember.equals("Grandma")){
+            	System.out.print("'s birthday is " + grandmasBirthday + ".");	
+            	}
+        	else if( familymember.equals("Candas")){
+            	System.out.print("'s birthday is " + grandmasBirthday + ".");	
+            	}
+        	else if( familymember.equals("Papa")){
+            	System.out.print("'s birthday is " + papasBirthday + ".");	
             	}
         //7. otherwise print "Sorry, i don't remember that person's birthday!"
         	else{
