@@ -19,27 +19,41 @@ public class changeCalculator {
     public static void main(String[] args) {
 
 
-        // Ask the user how many nickels they have
-    	String fivecents = JOptionPane.showInputDialog(" How many nickels do you have?");
-        // Convert their answer to an int using Integer.parseInt()
-    	int nickels = Integer.parseInt(fivecents);
-    	nickels = nickels * 5;
-        // Ask the user how many dimes they have, and convert their answer
-    	String tencents = JOptionPane.showInputDialog(" How many dimes do you have?");
-    	int dimes = Integer.parseInt(tencents);
-    	dimes = dimes * 10;
-        // Ask the user how many quarters they have, and convert their answer
-    	String twentyfivecents = JOptionPane.showInputDialog(" How many quarters do you have?");
-    	int quarters = Integer.parseInt(tencents);
-    	quarters = quarters * 25;
-
-        // Calculate how much money the user has and save it in a double variable 
+       int quarters = quarters();
+       int nickels = nickels();
+       int dimes = dimes();
+        // Calculate how much money the user has and save it in an int variable 
+    	int mooney = nickels + dimes + quarters;
     	
-
         // Tell the user how much money they have
+    	int yesno = JOptionPane.showConfirmDialog(null, " You have " + mooney + " cents. Do you want more?");
 
-
+    	
+    	if(yesno == 0){
+    		JOptionPane.showMessageDialog(null, " You now have 3 milion dollars.");
+    	}
+    	
+    	
     }
-
+static int quarters(){
+	String twentyfivecents = JOptionPane.showInputDialog(" How many quarters do you have?");
+	int quarters = Integer.parseInt(twentyfivecents);
+	quarters = quarters * 25;
+	return quarters;
+	}
+static int nickels(){
+	String fivecents = JOptionPane.showInputDialog(" How many nickels do you have?");
+    // Convert their answer to an int using Integer.parseInt()
+	int nickels = Integer.parseInt(fivecents);
+	nickels = nickels * 5;
+	return nickels;
+	}
+static int dimes(){
+	String tencents = JOptionPane.showInputDialog(" How many dimes do you have?");
+	int dimes = Integer.parseInt(tencents);
+	dimes = dimes * 10;
+	return dimes;
+	}
 }
 
+	
