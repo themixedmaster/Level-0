@@ -5,7 +5,7 @@ public class EZPZ2potatoversion {
 			if(numofpo == 4){
 				System.out.print(" 4. ");
 			}else{
-				System.out.print(numofpo + " carrot, ");
+				System.out.print(numofpo + " potato, ");
 			}
 		}
 		System.out.print(" more.");
