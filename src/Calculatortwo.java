@@ -6,7 +6,7 @@ public class Calculatortwo {
 		String number1 = JOptionPane.showInputDialog(null, " Pick a number.");
 		int num1 = Integer.parseInt(number1);
 		if( math.equals ("+")){
-			printadd()}
+			printadd();
 		
 		if( math.equals ("-")){
 			
@@ -25,11 +25,13 @@ public class Calculatortwo {
 	}
 
 	static void printadd(int a, int b) {
+		int answer = a - b;
 		System.out.println(a + " + " + b + " = " + a + b);
 	}
 
 	static void printsubtract(int a, int b) {
-		System.out.println(a + " - " + b + " = " + a - b);
+		int answer = a - b;
+		System.out.println(a + " - " + b + " = " + answer);
 	}
 
 	static void printmultiply(int a, int b) {
