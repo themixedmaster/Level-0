@@ -1,4 +1,6 @@
 
+import java.util.Random;
+
 import org.teachingextensions.logo.Tortoise;
 
 public class TortoiseWalkOfStaryu {
@@ -7,7 +9,8 @@ public class TortoiseWalkOfStaryu {
 		int x = 200;
 		Tortoise.setX(900);
 		Tortoise.setY(500);
-		starmie();
+		int thing = new Random().nextInt(8) + 1;
+		starmie(thing);
 
 		// 3. Set the size of the star to 30.
 
@@ -27,24 +30,20 @@ public class TortoiseWalkOfStaryu {
 
 	}
 
-	static void starmie() {
+	static void starmie(int thing) {
 		Tortoise.setSpeed(10);
 		int size = 1;
 		for (; true;) {
-			// 1. Set the X position of the Tortoise so that it starts on the
-			// left. You also need to show the Tortoise to see the result of
-			// this line.
-
-			// 2. Make the Tortoise draw a star shape. Hint: 144.
 			Tortoise.penDown();
-			staryu(size);
+			staryu(size, thing);
 			Tortoise.penUp();
 			Tortoise.move(size + 50);
 			size = size + 1;
+			thing = new Random().nextInt(8) + 1;
 		}
 	}
-	static void staryu(int size){
-		for (int i = 1; i <= 6; i++) {
+	static void staryu(int size, int thing){
+		for (int i = 1; i <= thing; i++) {
 			Tortoise.move(size + 30);
 			Tortoise.turn(144);
 		}

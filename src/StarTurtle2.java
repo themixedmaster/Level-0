@@ -1,9 +1,14 @@
+import java.util.Random;
+
+import org.teachingextensions.logo.Colors;
 import org.teachingextensions.logo.Tortoise;
 
 public class StarTurtle2 {
 	public static void main(String[] args) {
+		Tortoise.setX(0);
+		Tortoise.setY(1000);
 		Tortoise.setSpeed(10);
-		staryuLineDiagonal(20);
+		superStaryu(20);
 	}
 
 	static void staryu(int size) {
@@ -36,7 +41,8 @@ public class StarTurtle2 {
 		}
 	}
 	static void superStaryu(int size) {
-		for (; true;) {
+		for (; true;size = size + 10) {
+			Tortoise.setPenColor(Colors.getRandomColor());
 			staryu(size - 40);
 			Tortoise.turn(90);
 			Tortoise.move(size);
