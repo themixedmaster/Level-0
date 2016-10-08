@@ -39,7 +39,6 @@ public class TortoiseWalkOfStaryu {
 			Tortoise.penUp();
 			Tortoise.move(size + 50);
 			size = size + 1;
-			thing = new Random().nextInt(8) + 1;
 		}
 	}
 	static void staryu(int size, int thing){
